@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <!--label 태그와 for 속성
+            label: 요소 간 연결 관계를 설정
+            for: 연결하려는 id의 이름을 설정-->
+        <form>
+            <label>이름<input type="text" name="name"></label><br><br>
+            
+            <label for="myname">이름</label> <!--label의 for="myname"과 input의 id="myname"으로 연결된 하나의 그룹으로 인식-->
+            <input type="text" name="name" id="myname">
+        </form>
+        <form>
+            <fieldset>
+                <legend>커피 사이즈는 어떤 걸로 할까요?</legend>
+                <p>
+                    <input type="radio" id="size1" name="size" value="small">
+                    <label for="size1">small</label>
+                </p>
+                <p>
+                    <input type="radio" id="size2" name="size" value="medium"> 
+                    <label for="size2">medium</label>
+                </p>
+                <p>
+                    <input type="radio" id="size3" name="size" value="large">
+                    <label for="size3">large</label>
+                </p>
+            </fieldset>
+        </form>
+        <form>
+            이메일: <input type="email" name="email"><br>
+            전화번호: <input type="tel" name="tel"><br>
+            색상: <input type="color" name="color"><br>
+            월: <input type="month" name="month"><br>
+            날짜: <input type="date" name="date"><br>
+            주: <input type="week" name="week"><br>
+            시간: <input type="time" name="time"><br><br>
+            지역시간: <input type="datetime" name="datetime-local"><br>
+            숫자: <input type="number" name="number"><br>
+            범위: <input type="range" name="range" min="1" max="10" step="1"><br>
+            search: <input type="search" name="search"><br>
+            <input type="submit" value="제출">
+             
+            
+        </form>   
+    </body>
+</html>

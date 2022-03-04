@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <!-- 입력 양식 태그(input type)-->
+        <!--text: 텍스트 입력 양식
+            password: 비밀번호 입력 양식
+            checkbox: 체크박스 
+            radio: 라디오버튼
+            submit: form에서 지정한 페이지로 이동
+            reset: 모든 입력양식 초기화
+            button: 이벤트를 처리할 버튼
+            file: 파일 입력양식
+            hidden: 해당 내용을 표시하지 않음-->
+        
+        <!--text area태그: 자기소개서나 긴글 -->
+        <!--select option: 선택 양식, 옵션 추가-->
+        <!--fieldest: 입력양식 그룹 지정-->
+        <!--legend: 입력양식 그룹 이름--> 
+                
+       
+        <form action="Ex04.html" method="get">
+            <table border="1">
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text" name="id"></td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td><input type="text" name="password"></td>
+                </tr>
+                <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="목록">
+                    <input type="submit" value="전송">
+                    <input type="reset" value="취소">
+                </td>
+                </tr>    
+            </table>
+        </form>
+        <form>
+            <table border="2">
+                <tr>
+                    <td>성별</td><br>
+                    <td>
+                        <input type="radio" name="gender" value="man" checked>남자
+                        <input type="radio" name="gender" value="woman" checked>여자
+                    </td>
+                </tr>
+                <tr>
+                    <td>취미</td>
+                    <td>
+                        <input type="checkbox" name="hobby" value="sing">노래
+                        <input type="checkbox" name="hobby" value="climbing">등산
+                        <input type="checkbox" name="hobby" value="fishing">낚시
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <form>
+            <table border="3">
+                <tr>
+                    <td>컴퓨터 운영체제</td>
+                    <td>
+                        <select name="OS" size="3" multiple> <!--multiple: 메뉴를 다중으로 선택하는 경우에 사용-->
+                         <option value="windows">윈도우7</option>                                    
+                         <option value="linux">리눅스</option>                                    
+                         <option value="mac">맥</option>                                    
+                                                          
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>기타사항</td>
+                    <td>
+                        <textarea rows="7" cols="30" name="exam"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <select>
+            <option>JAVA</option>
+            <option>C</option>
+            <option>JSP</option>
+            <option>Jquery</option>
+        </select>
+    </body>
+</html>

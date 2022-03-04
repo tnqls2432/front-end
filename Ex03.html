@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>테이블 테그</title>
+    </head>
+    <body>
+        <!-- 표를 만드는 태그--> <!--row:행(가로), column:열(세로)-->
+        <table border="1">
+            <caption>주소록</caption> <!-- 표의 상단/하단에 제목을 적을때 사용-->
+            <tr> <!--표에서 행 구분-->
+                <th>이름</th> <!-- 제목 표시 사용-->
+                <th>주소</th>
+                <th>전화</th>
+            </tr>
+            <tr> 
+                <td>신바다</td> <!--표에서 열을 구분-->
+                <td>서울</td>
+                <td>010-3333-2222</td>
+            </tr>
+            <tr>
+                <td>고영민</td>
+                <td>부산</td>
+                <td>010-3233-4444</td>
+            </tr>
+            
+        </table>
+        <hr>
+        <!--행과 열 병합-->
+        <table border="2">
+            <tr>
+                <td colspan="4">지상파 방송국</td>
+            </tr>
+            <tr>
+                <td rowspan="2">채널</td>
+                <td>mbc</td>
+                <td>kbs</td>
+                <td>sbs</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>9</td>
+                <td>5</td>
+            </tr>
+        </table>
+        <hr>
+        <!--thead tbody tfoot을 사용한 테이블-->
+        <table border="3">
+            <caption>교재 가격표</caption> 
+            <thead> <!--테이블의 상단-->
+                <tr>
+                    <th>서적명</th>
+                    <th>출판사</th>
+                    <th>가격</th>
+                    <th>기타</th>
+                </tr>
+            </thead>
+            <tfoot> <!--테이블의 꼬리-->
+                <tr>
+                    <td colspan="2">합계</td>
+                    <td>87,000원</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tfoot>
+            <tbody> <!--테이블의 본문-->
+                <tr>
+                    <td>html5</td>
+                    <td>공갈닷컴</td>
+                    <td>55,000원</td>
+                    <td rowspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>css3</td>
+                    <td>남가람북스</td>
+                    <td>32,000원</td>
+                </tr>
+                <tr>
+                    <td>자바스크립트</td>
+                    <td>야메루 출판사</td>
+                    <td>20,000원</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
