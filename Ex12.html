@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>레이아웃</title>
+        <!-- 문서 인코딩 종류 -->
+        <meta charset="utf-8"></meta>
+
+        <!-- bootstrap CDN link -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!-- 외부 스타일시트 정의-->
+        <link rel="stylesheet" href="Ex12_style.css" type="text/css">
+    </head>
+    <body>
+        <!-- container: 어느정도 width를 잡아준다. 검사 > .container 속성 보기  -->
+        <div id="wrap" class="container">
+            <!--
+                d-flex + justify-content-center: 1차 하위 자식 태그를 수평 기준 가운데 정렬
+                d-flex + align-items-center: 1차 하위 자식 태그를 수직 기준 가운데 정렬
+            -->
+            
+            <header class="d-flex justify-content-center align-items-center">
+                <div class="logo-font font-weight-bold">Marondal</div>
+            </header>
+            <nav class="bg-warning d-flex align-items-center">
+                <!-- ul:nav li:nav-item a:nav-link :리스트의 기본효과 제거,  가로 메뉴 모양-->
+                <!-- text-dark처럼 boot에 들어가는 기본 색상을 적용하면 hover가 적용이 안될수도 있기 때문에 강제성(!important)을 부여해야 한다.
+                하지만 좋은 방법은 아니다.-->
+                
+                <ul class="nav nav-fill w-100">
+                    <li class="nav-item"><a href="#" class="nav-link text-dark font-weight-bold">메일</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-dark font-weight-bold">카페</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-dark font-weight-bold">블로그</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-dark font-weight-bold">지식인</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-dark font-weight-bold">쇼핑</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-dark font-weight-bold">부동산</a></li>
+                </ul>
+            </nav>
+            <!-- flex는 열12칸 기반이다. -->
+            <section class="contents bg-white d-flex">
+                <section class="content1 col-8">
+                    
+                    <article class="h-50 d-flex"> 
+                        <div class="col-3">
+                            <img src="https://media.istockphoto.com/photos/spring-background-picture-id1304251735?b=1&k=20&m=1304251735&s=170667a&w=0&h=XDZiZP_Rem7mpahpNYTnLhlCx9M4_63HTh1DKI2VHVA=" alt="그림1" width="150" height="130" class="mt-3">
+                        </div>
+                        <div class="col-9">
+                            <div class="text-info font-weight-bold">디자인</div>
+                            <div class="font-weight-bold">'힐링 제격' 한적한 소도시에 위치한 로컬 상점</div>
+                        <small>
+                            영국 매체 풋볼 인사이더는 8일(한국시간) "과거 웨스트햄에서 공격수로 활약했던 
+                            프랭크 맥아베니(63)가 최근 인상적인 활약에도 불구하고 토트넘 수비수 에릭 다이어(28)를 맹비난했다"고 보도했다.
+                        </small>
+                        
+                        </div>
+                                       
+                    </article>
+                    <article class="h-50 d-flex">
+                        <div class="col-3">
+                            <img src="https://media.istockphoto.com/photos/spring-background-picture-id1304251735?b=1&k=20&m=1304251735&s=170667a&w=0&h=XDZiZP_Rem7mpahpNYTnLhlCx9M4_63HTh1DKI2VHVA=" alt="그림1" width="150" height="130" class="mt-3">
+                        </div>
+                        <div class="col-9">
+                            <div class="text-info font-weight-bold">디자인</div>
+                            <div class="font-weight-bold">'힐링 제격' 한적한 소도시에 위치한 로컬 상점</div>
+                        <small>
+                            영국 매체 풋볼 인사이더는 8일(한국시간) "과거 웨스트햄에서 공격수로 활약했던 
+                            프랭크 맥아베니(63)가 최근 인상적인 활약에도 불구하고 토트넘 수비수 에릭 다이어(28)를 맹비난했다"고 보도했다.
+                        </small>
+                        
+                        </div>
+                    </article>
+                </section>
+                <aside class="col-4">
+                    <div class="m-3">
+                        <small>marondal을 더 안전하고 편리하게 이용하세요.</small>
+                        <a href="#" class="btn btn-warning btn-block mt-3">Marondal 로그인</a>
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="text-dark">아이디 / 비밀번호 찾기</a>
+                            <a href="#" class="text-dark">회원가입</a>
+                        </div>
+                        <div class="mt-2">
+                            <img src="https://ssl.pstatic.net/tveta/libs/1381/1381625/25df6544e1487ee48a37_20220225141726828.jpg" alt="베너" width="310" height="115">
+                        </div>
+                    </div>
+                </aside>
+            </section>
+            <footer class="d-flex justify-content-center align-items-center">
+                <div>
+                    copyright @ marondal 2021. All rights reserved.
+                </div>
+                
+            </footer>
+        </div>
+    </body>
+</html>
